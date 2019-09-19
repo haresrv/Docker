@@ -1,0 +1,32 @@
+version: '3'
+
+services:
+
+
+ server:
+  build: 
+     context: ./server
+     dockerfile: DockerFile
+  expose:
+     - ${APP_SERVER_PORT}
+  environment:
+     API_HOST: ${API_HOST}
+     APP_SERVER_PORT: ${APP_SERVER_PORT}
+  ports:
+     - ${APP_SERVER_PORT}:${APP_SERVER_PORT}
+  command: npm run dev
+
+ client:
+  build:
+     context: ./client
+     dockerfile: DockerFile
+  expose:
+     - ${REACT_APP_PORT}
+  environment:
+     REACT_APP_PORT: ${REACT_APP_PORT}
+  ports:
+     - ${REACT_APP_PORT}:${REACT_APP_PORT}
+  links:
+     - server
+  command: npm run start
+ 
