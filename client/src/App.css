@@ -1,0 +1,92 @@
+
+.wrap
+{
+  margin: 0 auto;  
+  background-color: #ffffff;
+  width: 500px;
+  height: 700px;
+  padding: 20px;
+}
+.particles
+{
+  position: fixed;
+  z-index: -1;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left:0;
+}
+
+.error {
+  color:#ff0000;
+  font-size: 0.8em;
+  display: relative;
+}
+
+.zrror {
+  color: #00ff00;
+
+  font-size: 0.8em;
+  display: relative;
+}
+
+
+.blink_me {
+  animation: blinker 1s linear infinite;
+}
+
+@keyframes blinker {
+  50% {
+    opacity: 0;
+  }
+}
+.card-header
+{
+color: #ff0000;
+font-weight: 1000;
+}
+
+.card.border-success
+{
+width: 400px;
+padding: 20px;
+box-shadow: 0px 2px 2px 2px;
+margin:0 auto;
+}
+
+@keyframes spin {
+    from {
+        transform:rotate(30deg);
+    }
+    to {
+        transform:rotate(-30deg);
+    }
+}
+
+body
+{
+  /*background: linear-gradient(rgb(135, 149, 196) 0%, rgb(78, 24, 107) 44%, rgb(74, 7, 31) 100%);*/
+  
+  background: linear-gradient(#b92b27, #1565C0);
+  /*background: linear-gradient(rgb(250, 147, 95) 0%, rgb(250, 145, 95) 44%, rgb(250, 147, 90) 100%);*/
+}
+
+.seldate
+{
+  margin-left: 20px;
+}
+
+@font-face {
+font-family: 'SEGA LOGO FONT';
+font-style: normal;
+font-weight: normal;
+src: local('SEGA LOGO FONT'), url('SEGA.woff') format('woff');
+}
+
+
+
+.face
+{
+  color:#ff0000;
+  font-family: 'SEGA LOGO FONT'
+}
